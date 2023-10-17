@@ -1,12 +1,11 @@
 
 <h1 align="center">PORTFÓLIO DE FASES</h1>
 
-## Descrição do Projeto
-<p align="center">é é uma versão mais minimalista e limpa, um portfólio voltado para apresentação e ilustração dos projetos.</p>
+## LINK DO PROJETO: https://portifolio-de-muitas-fases.web.app/ 
 
-<h1 align="center">
-    <a href="https://pt-br.reactjs.org/"></a>
-</h1>
+## Descrição do Projeto
+<p>É uma versão mais minimalista e limpa, um portfólio voltado para apresentação e ilustração dos projetos.</p>
+
 <p align="center">🚀pode-se adicionar vários projetos</p>
 
 <h4 align="center"> 
