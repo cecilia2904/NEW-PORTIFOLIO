@@ -209,7 +209,7 @@ section.especiliadades .flex {
 
 .especiliadades .especialidades-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #ffffff78;
+   
 }
 
 .especiliadades .especialidades-box i {
@@ -267,7 +267,7 @@ section.sobre .flex {
 /* ESTILO DO PORTFÓLIO */
 section.portfolio {
     padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
+    
 }
 
 section.portfolio .flex {
@@ -318,7 +318,7 @@ section.portfolio .flex {
 
 footer {
     padding: 40px 4%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
+    
 }
 
 footer .flex {
@@ -340,6 +340,13 @@ footer .line-footer p i {
 
 footer .line-footer p a {
     color: #fff;
+}
+
+.btn-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px auto 0 auto; /* força centralização via margem automática */
 }
 
 @media screen and (max-width: 1020px) {
