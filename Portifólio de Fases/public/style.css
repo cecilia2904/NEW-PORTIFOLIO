@@ -16,23 +16,127 @@ body {
     font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+/* Título do hero */
+.hero-title {
+    font-weight: 900;
+    line-height: 1.05;
+    color: #fff;
+    font-size: 2.75rem;
+    margin-bottom: .6rem;
+}
+
+@media (min-width:640px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width:1024px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+/* Subtexto do hero */
+.hero-lead {
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+}
+
+@media (min-width:640px) {
+    .hero-lead {
+        font-size: 1.25rem;
+    }
+}
+
+/* Lista de especialidades */
+.specialties {
+    display: grid;
+    gap: .6rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.specialties li {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    color: #e5e7eb;
+    /* gray-200 */
+    font-weight: 600;
+}
+
+.specialties li i {
+    width: 34px;
+    height: 34px;
+    border-radius: .6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(18, 98, 16, .10);
+    /* usa sua brand */
+    border: 1px solid rgba(18, 98, 16, .35);
+    color: var(--brand, #126210);
+    font-size: 1.05rem;
+}
+
+.specialties li span {
+    color: var(--brand-accent, #32A329);
+    font-weight: 700;
+}
+
+/* Botões (garante contraste com brand escuro) */
+.btn-solid {
+    background: var(--brand, #126210);
+    color: #fff;
+}
+
+.btn-solid:hover {
+    background: var(--brand-hover, #1C9919);
+}
+
+
 /* Ícones */
-.icon-xl { font-size: 1.75rem; line-height: 1; }
-.icon-2xl { font-size: 2.25rem; line-height: 1; }
-.icon-5xl { font-size: 64px; line-height: 1; }
+.icon-xl {
+    font-size: 1.75rem;
+    line-height: 1;
+}
+
+.icon-2xl {
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+.icon-5xl {
+    font-size: 64px;
+    line-height: 1;
+}
 
 /* Cartela visual para ícone das habilidades */
-.skill-icon{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:44px; height:44px; border-radius:12px;
-  background: rgba(18,98,16,.10);              /* usa o verde escuro translúcido */
-  color: var(--brand, #126210);                 /* fallback: #126210 */
-  border: 1px solid rgba(18,98,16,.35);
+.skill-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(18, 98, 16, .10);
+    /* usa o verde escuro translúcido */
+    color: var(--brand, #126210);
+    /* fallback: #126210 */
+    border: 1px solid rgba(18, 98, 16, .35);
 }
 
 /* (opcional) utilitários de marca */
-.text-brand{ color: var(--brand, #126210) !important; }
-.bg-brand{ background: var(--brand, #126210) !important; }
+.text-brand {
+    color: var(--brand, #126210) !important;
+}
+
+.bg-brand {
+    background: var(--brand, #126210) !important;
+}
 
 
 /* Acessibilidade de foco */
@@ -88,17 +192,40 @@ body {
 }
 
 /* ====== Cards 2 por viewport (desktop) ====== */
-.card-2up { width: 100%; }                   /* mobile: 1 por view */
-@media (min-width: 1024px) {                 /* lg: 2 por view */
-  .card-2up { width: calc(50% - 1rem); }     /* - gap/2 para alinhar com space-x-8 */
+.card-2up {
+    width: 100%;
+}
+
+/* mobile: 1 por view */
+@media (min-width: 1024px) {
+
+    /* lg: 2 por view */
+    .card-2up {
+        width: calc(50% - 1rem);
+    }
+
+    /* - gap/2 para alinhar com space-x-8 */
 }
 
 /* Ajuste das tags com ícone */
-.tag i { margin-right: .35rem; font-size: 1rem; line-height: 1; }
+.tag i {
+    margin-right: .35rem;
+    font-size: 1rem;
+    line-height: 1;
+}
 
 /* Botões redondos com ícones (principal e mini) — mantêm seu estilo */
-#prev-btn i, #next-btn i { font-size: 1.1rem; line-height: 1; }
-.carousel-prev i, .carousel-next i { font-size: .95rem; line-height: 1; }
+#prev-btn i,
+#next-btn i {
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.carousel-prev i,
+.carousel-next i {
+    font-size: .95rem;
+    line-height: 1;
+}
 
 
 /* Tags e botões */

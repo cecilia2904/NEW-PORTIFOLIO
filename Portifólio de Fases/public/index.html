@@ -42,7 +42,7 @@
                 <a href="#inicio" class="nav-link">Início</a>
                 <a href="#valor" class="nav-link">Habilidades</a>
                 <a href="#projetos" class="nav-link">Projetos</a>
-                <a href="https://wa.me/5585996959732"
+                <a href="#contatos"
                     class="py-1 px-4 rounded-full text-gray-900 bg-green-400 hover:bg-green-300 font-bold transition">Contato</a>
             </nav>
 
@@ -58,10 +58,10 @@
         <nav id="mobile-nav" class="md:hidden hidden border-b border-gray-800">
             <ul class="py-4 space-y-3 text-sm font-medium">
                 <li><a class="block nav-link px-1" href="#inicio">Início</a></li>
-                <li><a class="block nav-link px-1" href="#valor">Valor & Habilidades</a></li>
+                <li><a class="block nav-link px-1" href="#valor">Habilidades</a></li>
                 <li><a class="block nav-link px-1" href="#projetos">Projetos</a></li>
                 <li><a class="inline-flex items-center justify-center w-full py-2 px-4 rounded-lg bg-green-400 text-gray-900 font-bold hover:bg-green-300 transition"
-                        href="#contato">Contato</a></li>
+                        href="#contatos">Contatos</a></li>
             </ul>
         </nav>
 
@@ -71,21 +71,40 @@
             <section id="inicio" class="pt-16 pb-20">
                 <div class="md:flex items-center justify-between gap-8">
                     <div class="md:w-3/5">
-                        <p class="text-lg text-gray-400 mb-2">Olá, eu sou Maria Cecilia.</p>
-                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight text-white mb-6">
-                            A Ponte Entre Visão e <span class="text-green-400">Código Performático.</span>
+                        <p class="text-lg text-gray-400 mb-2"></p>
+
+                        <h1 class="hero-title">
+                            Olá, eu sou <span class="text-brand">Maria Cecília</span>.
                         </h1>
-                        <p class="text-lg sm:text-xl text-gray-400 mb-8 max-w-xl">
-                            Sou <strong>Designer de Produto Híbrida (UX/UI e Front-end)</strong>. Crio experiências
-                            digitais validadas que geram conversão e as implemento com código limpo e otimizado.
+
+
+                        <p class="hero-lead">
+                            Do insight ao produto em produção. Projeto a UX/UI, valido com usuários e entrego o front em
+                            produção com código limpo e
+                            testes.
                         </p>
-                        <a href="#projetos"
-                            class="inline-flex items-center bg-green-400 text-gray-900 font-bold py-3 px-6 rounded-xl hover:bg-green-300 transition transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400">
-                            Ver Projetos Recentes →
-                        </a>
+
+                        <!-- Especialidades -->
+                        <ul class="specialties">
+                            <li><i class="bi bi-search"></i> Pesquisa e prototipação </li>
+                            <li><i class="bi bi-universal-access"></i> UI responsiva e acessível </li>
+                            <li><i class="bi bi-speedometer2"></i> Front-end performático </li>
+                            <li><i class="bi bi-diagram-3"></i> Hand-off / back-end </li>
+                        </ul>
+
+                        <p class="text-gray-400 mt-3">
+                            Já colaborei em SaaS, painéis internos, e-commerce e plataformas B2B.
+                        </p>
+
+                        <div class="flex flex-wrap gap-4 mt-6">
+                            <a href="#projetos" class="btn-solid">Ver projetos recentes →</a>
+                            <a href="https://wa.me/5585996959732" target="_blank" rel="noopener" class="btn-outline">
+                                <i class="bi bi-whatsapp mr-2"></i> Fale comigo no WhatsApp
+                            </a>
+                        </div>
                     </div>
 
-                    <!-- Avatar / visual -->
+                    <!-- Avatar/visual à direita (mantive seu estilo) -->
                     <div class="mt-10 md:mt-0 md:w-2/5 flex justify-center">
                         <div
                             class="w-56 h-56 sm:w-64 sm:h-64 rounded-full accent-border dynamic-glow p-1 flex items-center justify-center bg-gray-800">
@@ -95,26 +114,25 @@
                                 <span class="text-sm block">UX/FE</span>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
 
+
             <!-- Valor & Habilidades -->
             <section id="valor" class="py-16 border-t border-gray-800">
                 <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
-                    Minhas <span class="text-green-400">Habilidades & Especialidades</span>
+                    Minhas <span class="text-green-400">Habilidades & Especialidades</span>.
                 </h2>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
 
-                    <!-- UX Research & Estratégia -->
+                    <!-- Pesquisa & Estratégia (UX) -->
                     <article class="p-6 bg-gray-800 rounded-xl accent-border">
                         <span class="skill-icon mb-4"><i class="bi bi-search icon-xl" aria-hidden="true"></i></span>
-                        <h3 class="text-xl font-semibold mb-2">UX Research & Estratégia</h3>
+                        <h3 class="text-xl font-semibold mb-2">Pesquisa & Estratégia (UX)</h3>
                         <p class="text-gray-400 text-sm">
-                            Descoberta, entrevistas, JTBD, jornada e priorização. Transformo insights em hipóteses e
-                            requisitos claros.
+                            Entendo o problema com entrevistas, dados e jornada do usuário. Transformo descobertas em requisitos simples e priorizados.
                         </p>
                     </article>
 
@@ -124,7 +142,7 @@
                                 aria-hidden="true"></i></span>
                         <h3 class="text-xl font-semibold mb-2">UI Design & Design System (Figma)</h3>
                         <p class="text-gray-400 text-sm">
-                            Componentes, auto-layout, tokens e documentação. Fluxo de handoff enxuto e consistente.
+                            Desenho telas limpas e consistentes. Crio componentes reutilizáveis e tokens para acelerar novas páginas e manter padrão.
                         </p>
                     </article>
 
@@ -134,8 +152,7 @@
                                 aria-hidden="true"></i></span>
                         <h3 class="text-xl font-semibold mb-2">Acessibilidade & Responsividade</h3>
                         <p class="text-gray-400 text-sm">
-                            WCAG, semântica, teclado/leitor de tela e *breakpoints*. Experiências inclusivas em qualquer
-                            dispositivo.
+                            Interfaces que funcionam bem no celular, no desktop e com leitor de tela. Atendo boas práticas WCAG (contraste, navegação por teclado).
                         </p>
                     </article>
 
@@ -144,28 +161,25 @@
                         <span class="skill-icon mb-4"><i class="bi bi-code-slash icon-xl" aria-hidden="true"></i></span>
                         <h3 class="text-xl font-semibold mb-2">Front-end (HTML/CSS/JS • React/Vue)</h3>
                         <p class="text-gray-400 text-sm">
-                            Código limpo, estados previsíveis e performance (bundle, lazy, acessibilidade e testes
-                            básicos).
+                            Tiro o design do Figma e entrego em código rápido e organizado. Páginas leves, estados previsíveis e manutenção fácil.
                         </p>
                     </article>
 
                     <!-- Prototipação & Testes -->
                     <article class="p-6 bg-gray-800 rounded-xl accent-border">
                         <span class="skill-icon mb-4"><i class="bi bi-bezier2 icon-xl" aria-hidden="true"></i></span>
-                        <h3 class="text-xl font-semibold mb-2">Prototipação & Testes</h3>
+                        <h3 class="text-xl font-semibold mb-2">Prototipação & Teste com Usuários</h3>
                         <p class="text-gray-400 text-sm">
-                            Protótipos de baixa/alta fidelidade, testes moderados e iteração rápida orientada a
-                            evidências.
+                            Protótipos clicáveis para validar antes de programar. Testes moderados e ajustes rápidos guiados por evidências.
                         </p>
                     </article>
 
                     <!-- Integração & Handoff para Dev -->
                     <article class="p-6 bg-gray-800 rounded-xl accent-border">
                         <span class="skill-icon mb-4"><i class="bi bi-gear icon-xl" aria-hidden="true"></i></span>
-                        <h3 class="text-xl font-semibold mb-2">Integração & Handoff para Dev</h3>
+                        <h3 class="text-xl font-semibold mb-2">Integrações & Automação (APIs)</h3>
                         <p class="text-gray-400 text-sm">
-                            Especificações claras, estados de componentes, fluxos e versionamento para acelerar a
-                            entrega.
+                            Conecto sistemas e simplifico fluxos: GLPI, Stripe, relatórios e dashboards. Menos retrabalho, mais produtividade.
                         </p>
                     </article>
 
@@ -176,9 +190,9 @@
             <!-- Projetos -->
             <section id="projetos" class="py-16 border-t border-gray-800 project-bg-glow">
                 <div class="flex justify-between items-end mb-8">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-white">
-                        Meus Projetos
-                    </h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
+                    Meus <span class="text-green-400">Principais projetos</span>.
+                </h2>
 
                     <!-- setas desktop -->
                     <div class="hidden sm:flex space-x-3">
@@ -415,7 +429,7 @@
         </main>
 
         <!-- Footer -->
-        <footer id="contato" class="py-16 border-t border-gray-800">
+        <footer id="contatos" class="py-16 border-t border-gray-800">
             <div class="text-center space-y-6">
                 <h2 class="text-3xl font-extrabold text-white">VAMOS <span class="text-green-400">CONVERSAR?</span></h2>
                 <p class="text-gray-400">Disponível para <strong>projetos sob demanda</strong> (UI/UX e Front-end) em
