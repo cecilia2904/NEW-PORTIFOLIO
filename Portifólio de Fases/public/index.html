@@ -1,217 +1,440 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <!-- FIM GOOGLE FONTES -->
-    <!-- BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- FIM BOOTSTRAP ICONS -->
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description"
+        content="Portfólio de Maria Cecilia — Designer de Produto Híbrida (UX/Front-end). Projetos, UX, Design System e código performático." />
+    <title>Maria Cecilia | Designer de Produto Híbrida (UX/Front-end)</title>
 
-    <script src="menu.js" defer></script>
+    <!-- Tailwind (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <title>Portifólio de Maria Cecilia </title>
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet" />
+
+    <!-- Ícones (Bootstrap Icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Estilos próprios -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- JS -->
+    <script src="index.js" defer></script>
 </head>
 
-<body>
+<body class="antialiased">
 
-    <header>
-        <div class="interface">
-            <div class="logo">
-                <a href="#">
-                    <img src="images/logo.png" alt="Logo da Agência BRN">
-                </a>
-            </div><!--logo-->
+    <!-- Wrap -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <nav class="menu-desktop">
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#especialidades">Especialidades</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                </ul>
+        <!-- Header -->
+        <header class="flex items-center justify-between py-6 border-b border-gray-800">
+            <a href="#inicio"
+                class="text-2xl font-extrabold text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400 rounded">
+                M. <span class="text-green-400">C.</span>
+            </a>
+
+            <!-- Nav Desktop -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#valor" class="nav-link">Habilidades</a>
+                <a href="#projetos" class="nav-link">Projetos</a>
+                <a href="https://wa.me/5585996959732"
+                    class="py-1 px-4 rounded-full text-gray-900 bg-green-400 hover:bg-green-300 font-bold transition">Contato</a>
             </nav>
 
+            <!-- Toggle Mobile -->
+            <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav"
+                class="md:hidden text-green-400 text-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400 rounded">
+                <span class="sr-only">Abrir menu</span>
+                &#9776;
+            </button>
+        </header>
 
+        <!-- Nav Mobile -->
+        <nav id="mobile-nav" class="md:hidden hidden border-b border-gray-800">
+            <ul class="py-4 space-y-3 text-sm font-medium">
+                <li><a class="block nav-link px-1" href="#inicio">Início</a></li>
+                <li><a class="block nav-link px-1" href="#valor">Valor & Habilidades</a></li>
+                <li><a class="block nav-link px-1" href="#projetos">Projetos</a></li>
+                <li><a class="inline-flex items-center justify-center w-full py-2 px-4 rounded-lg bg-green-400 text-gray-900 font-bold hover:bg-green-300 transition"
+                        href="#contato">Contato</a></li>
+            </ul>
+        </nav>
 
-            <div class="btn-abrir-menu" id="btn-menu">
-                <i class="bi bi-list"></i>
-            </div>
+        <main class="space-y-24 py-12">
 
-            <div class="menu-mobile" id="menu-mobile">
-                <div class="btn-fechar">
-                    <i class="bi bi-x-lg"></i>
-                </div>
-
-                <nav>
-                    <ul>
-                        <li><a href="#">Início</a></li>
-                        <li><a href="#especialidades">Especialidades</a></li>
-                        <li><a href="#projetos">Projetos</a></li>
-                    </ul>
-                </nav>
-
-            </div><!--menu-mobile-->
-            <div class="overlay-menu" id="overlay-menu"></div>
-        </div><!--interface-->
-    </header>
-
-    <main>
-        <section class="topo-do-site">
-            <div class="interface">
-                <div class="flex">
-                    <div class="txt-topo-site">
-                        <h1>Olá, eu sou <span>Maria Cecília.</span> Desenvolvedora & UI/UX Designer.</h1>
-                        <p>Sou desenvolvedora frontend em formação, com experiência em projetos web e mobile, aliando
-                            UI/UX Design no Figma ao desenvolvimento de interfaces modernas, responsivas e centradas no
-                            usuário.</p>
-                        <p>Tenho experiência prática com tecnologias de desenvolvimento web e design de interfaces. Estou aberta
-                            a <strong>projetos sob demanda</strong>, trazendo soluções funcionais e bem estruturadas em
-                            horários alternativos.</p>
-                    </div>
-
-
-                    <div class="img-topo-site">
-                        <img src="images/eu.png" alt="">
-                    </div><!--img-topo-site-->
-                </div><!--flex-->
-            </div><!--interface-->
-        </section><!--topo-do-site-->
-
-        <section class="especiliadades">
-            <div class="interface" id="especialidades">
-                <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
-                <div class="flex">
-
-                    <div class="especialidades-box">
-                        <i class="bi bi-person-square"></i>
-                        <h3>Experiência do Usuário UX/UI</h3>
-                        <p>Pesquiso e desenho fluxos e interfaces intuitivas, priorizando tarefas reais do usuário.</p>
-                    </div>
-
-                    <div class="especialidades-box">
-                        <i class="bi bi-grid-1x2-fill"></i>
-                        <h3>Prototipagem e Design com Figma</h3>
-                        <p>Protótipos navegáveis, componentes e handoff organizado para desenvolvimento.</p>
-                    </div>
-
-                    <div class="especialidades-box">
-                        <i class="bi bi-square-half"></i>
-                        <h3>Interfaces Responsivas</h3>
-                        <p>Layouts fluidos que funcionam bem em desktop, tablet e mobile.</p>
-                    </div>
-
-                    <div class="especialidades-box">
-                        <i class="bi bi-code"></i>
-                        <h3>Desenvolvimento Web</h3>
-                        <p>HTML, CSS e JavaScript na prática. Integração com APIs e boas práticas.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-
-        </div><!--flex-->
-        </div><!--interface-->
-        </section><!--especiliadades-->
-
-        <section class="portfolio">
-            <div class="interface" id="projetos">
-                <h2 class="titulo">MEUS PRINCIPAIS <span>PROJETOS.</span></h2>
-
-                <!-- Primeira linha de projetos -->
-                <div class="flex">
-                    <div class="img-port" style="background-image: url(projetos/edifica.png);">
-                        <a href="#" class="overlay">
-                            <strong>Lojas Edifica</strong><br>
-                            <small>Front-end Responsivo</small>
-                            <p>Site de vendas com layout moderno e otimizado para dispositivos móveis.</p>
+            <!-- Hero -->
+            <section id="inicio" class="pt-16 pb-20">
+                <div class="md:flex items-center justify-between gap-8">
+                    <div class="md:w-3/5">
+                        <p class="text-lg text-gray-400 mb-2">Olá, eu sou Maria Cecilia.</p>
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight text-white mb-6">
+                            A Ponte Entre Visão e <span class="text-green-400">Código Performático.</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-gray-400 mb-8 max-w-xl">
+                            Sou <strong>Designer de Produto Híbrida (UX/UI e Front-end)</strong>. Crio experiências
+                            digitais validadas que geram conversão e as implemento com código limpo e otimizado.
+                        </p>
+                        <a href="#projetos"
+                            class="inline-flex items-center bg-green-400 text-gray-900 font-bold py-3 px-6 rounded-xl hover:bg-green-300 transition transform hover:scale-[1.02] focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400">
+                            Ver Projetos Recentes →
                         </a>
                     </div>
 
-                    <div class="img-port" style="background-image: url(projetos/cejj.png);">
-                        <a href="https://ogestorlouco.web.app" target="_blank" rel="noopener noreferrer"
-                            class="overlay">
-                            <strong>O Gestor Louco</strong><br>
-                            <small>UI/UX & Protótipo</small>
-                            <p>Protótipo navegável de jogo educativo, com foco em experiência do usuário.</p>
-                        </a>
-                    </div>
+                    <!-- Avatar / visual -->
+                    <div class="mt-10 md:mt-0 md:w-2/5 flex justify-center">
+                        <div
+                            class="w-56 h-56 sm:w-64 sm:h-64 rounded-full accent-border dynamic-glow p-1 flex items-center justify-center bg-gray-800">
+                            <div class="text-center text-gray-300">
+                                <i class="bi bi-person-workspace icon-5xl block mb-3"></i>
+                                <span class="text-sm block">Foco em Resultado</span>
+                                <span class="text-sm block">UX/FE</span>
+                            </div>
+                        </div>
 
-                    <div class="img-port" style="background-image: url(projetos/CANTINHO-DOS-BOLSISTAS.png);">
-                        <a class="overlay">
-                            <strong>Cantinho dos Bolsistas</strong><br>
-                            <small>Design de Interface</small>
-                            <p>Ambiente digital para centralizar tutoriais, documentos e materiais acadêmicos.</p>
-                        </a>
-                    </div>
-
-                </div>
-
-                <!-- Segunda linha de projetos -->
-                <div class="flex" style="margin-top: 30px;">
-                    <div class="img-port" style="background-image: url(projetos/HDOC.png);">
-                        <a href="#" class="overlay">
-                            <strong>HDOC</strong><br>
-                            <small>UI/UX & Front-end</small>
-                            <p>Plataforma médica com design limpo e navegação intuitiva para pacientes.</p>
-                        </a>
-                    </div>
-                    <div class="img-port" style="background-image: url(projetos/PRIMEDRY.png);">
-                        <a href="#" class="overlay">
-                            <strong>PRIMEDRY</strong><br>
-                            <small>Front-end & Identidade Visual</small>
-                            <p>Landing page corporativa com foco em apresentação de serviços e conversão.</p>
-                        </a>
-                    </div>
-                    <div class="img-port" style="background-image: url(projetos/SIF.png);">
-                        <a href="#" class="overlay">
-                            <strong>SIF</strong><br>
-                            <small>Interface & Usabilidade</small>
-                            <p>Sistema acadêmico com telas redesenhadas para melhor clareza e acessibilidade.</p>
-                        </a>
                     </div>
                 </div>
+            </section>
 
-            </div>
-        </section>
+            <!-- Valor & Habilidades -->
+            <section id="valor" class="py-16 border-t border-gray-800">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
+                    Minhas <span class="text-green-400">Habilidades & Especialidades</span>
+                </h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                    <!-- UX Research & Estratégia -->
+                    <article class="p-6 bg-gray-800 rounded-xl accent-border">
+                        <span class="skill-icon mb-4"><i class="bi bi-search icon-xl" aria-hidden="true"></i></span>
+                        <h3 class="text-xl font-semibold mb-2">UX Research & Estratégia</h3>
+                        <p class="text-gray-400 text-sm">
+                            Descoberta, entrevistas, JTBD, jornada e priorização. Transformo insights em hipóteses e
+                            requisitos claros.
+                        </p>
+                    </article>
+
+                    <!-- UI Design & Design System -->
+                    <article class="p-6 bg-gray-800 rounded-xl accent-border">
+                        <span class="skill-icon mb-4"><i class="bi bi-ui-checks-grid icon-xl"
+                                aria-hidden="true"></i></span>
+                        <h3 class="text-xl font-semibold mb-2">UI Design & Design System (Figma)</h3>
+                        <p class="text-gray-400 text-sm">
+                            Componentes, auto-layout, tokens e documentação. Fluxo de handoff enxuto e consistente.
+                        </p>
+                    </article>
+
+                    <!-- Acessibilidade & Responsividade -->
+                    <article class="p-6 bg-gray-800 rounded-xl accent-border">
+                        <span class="skill-icon mb-4"><i class="bi bi-universal-access icon-xl"
+                                aria-hidden="true"></i></span>
+                        <h3 class="text-xl font-semibold mb-2">Acessibilidade & Responsividade</h3>
+                        <p class="text-gray-400 text-sm">
+                            WCAG, semântica, teclado/leitor de tela e *breakpoints*. Experiências inclusivas em qualquer
+                            dispositivo.
+                        </p>
+                    </article>
+
+                    <!-- Front-end (HTML/CSS/JS + React/Vue) -->
+                    <article class="p-6 bg-gray-800 rounded-xl accent-border">
+                        <span class="skill-icon mb-4"><i class="bi bi-code-slash icon-xl" aria-hidden="true"></i></span>
+                        <h3 class="text-xl font-semibold mb-2">Front-end (HTML/CSS/JS • React/Vue)</h3>
+                        <p class="text-gray-400 text-sm">
+                            Código limpo, estados previsíveis e performance (bundle, lazy, acessibilidade e testes
+                            básicos).
+                        </p>
+                    </article>
+
+                    <!-- Prototipação & Testes -->
+                    <article class="p-6 bg-gray-800 rounded-xl accent-border">
+                        <span class="skill-icon mb-4"><i class="bi bi-bezier2 icon-xl" aria-hidden="true"></i></span>
+                        <h3 class="text-xl font-semibold mb-2">Prototipação & Testes</h3>
+                        <p class="text-gray-400 text-sm">
+                            Protótipos de baixa/alta fidelidade, testes moderados e iteração rápida orientada a
+                            evidências.
+                        </p>
+                    </article>
+
+                    <!-- Integração & Handoff para Dev -->
+                    <article class="p-6 bg-gray-800 rounded-xl accent-border">
+                        <span class="skill-icon mb-4"><i class="bi bi-gear icon-xl" aria-hidden="true"></i></span>
+                        <h3 class="text-xl font-semibold mb-2">Integração & Handoff para Dev</h3>
+                        <p class="text-gray-400 text-sm">
+                            Especificações claras, estados de componentes, fluxos e versionamento para acelerar a
+                            entrega.
+                        </p>
+                    </article>
+
+                </div>
+            </section>
 
 
+            <!-- Projetos -->
+            <section id="projetos" class="py-16 border-t border-gray-800 project-bg-glow">
+                <div class="flex justify-between items-end mb-8">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">
+                        Meus Projetos
+                    </h2>
 
+                    <!-- setas desktop -->
+                    <div class="hidden sm:flex space-x-3">
+                        <button id="prev-btn"
+                            class="p-3 rounded-full bg-gray-800 text-green-400 hover:bg-gray-700 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400"
+                            aria-label="Projetos anteriores">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 19l-7-7 7-7m-7 7h18" />
+                            </svg>
+                        </button>
+                        <button id="next-btn"
+                            class="p-3 rounded-full bg-gray-800 text-green-400 hover:bg-gray-700 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400"
+                            aria-label="Próximos projetos">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7-7 7M21 12H3" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
 
-    </main>
+                <!-- carrossel principal -->
+                <div id="project-carousel"
+                    class="flex flex-col sm:flex-row space-y-8 sm:space-y-0 sm:space-x-8 overflow-x-auto hide-scrollbar snap-x snap-mandatory pb-6">
 
+                    <!-- Projeto 1 -->
+                    <article class="flex-shrink-0 card-2up rounded-xl shadow-lg snap-start bg-gray-900 accent-border"
+                        data-project-id="1">
+                        <div class="p-6">
+                            <!-- mini-carousel -->
+                            <div class="relative w-full h-56 bg-gray-950 rounded-lg overflow-hidden mb-6">
+                                <div class="carousel-track w-full h-full relative">
+                                    <div class="carousel-slide absolute inset-0 transition-opacity duration-300"
+                                        data-slide-index="0">
+                                        <img loading="lazy"
+                                            src="https://placehold.co/550x224/000033/FFFFFF?text=Slide+1:+Capa+Principal"
+                                            alt="Capa principal do projeto" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="carousel-slide absolute inset-0 transition-opacity duration-300 slide-hidden"
+                                        data-slide-index="1">
+                                        <img loading="lazy"
+                                            src="https://placehold.co/550x224/004400/FFFFFF?text=Slide+2:+Tela+de+Resultado+UX"
+                                            alt="Tela de resultado UX" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="carousel-slide absolute inset-0 transition-opacity duration-300 slide-hidden"
+                                        data-slide-index="2">
+                                        <img loading="lazy"
+                                            src="https://placehold.co/550x224/440000/FFFFFF?text=Slide+3:+Detalhes+Tecnicos"
+                                            alt="Detalhes técnicos" class="w-full h-full object-cover" />
+                                    </div>
+                                </div>
 
-    <footer>
-        <div class="interface">
+                                <!-- controles -->
+                                <button class="carousel-prev" onclick="prevSlide(this)" aria-label="Slide anterior">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                                <button class="carousel-next" onclick="nextSlide(this)" aria-label="Próximo slide">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
 
-            <div class="line-footer borda">
+                                <!-- dots -->
+                                <div class="carousel-dots">
+                                    <button class="dot dot-active" onclick="goToSlide(this,0)"
+                                        aria-label="Ir ao slide 1"></button>
+                                    <button class="dot" onclick="goToSlide(this,1)" aria-label="Ir ao slide 2"></button>
+                                    <button class="dot" onclick="goToSlide(this,2)" aria-label="Ir ao slide 3"></button>
+                                </div>
+                            </div>
 
-                <h2 class="titulo">VAMOS <span>CONVERSAR?</span></h2>
-                <p>Disponível para <strong>projetos sob demanda</strong> (UI/UX e front-end) em horários alternativos.
+                            <h3 class="text-2xl font-bold text-white mb-2">Jogo do Número Secreto</h3>
+                            <p class="text-gray-400 text-sm mb-4">Adivinhe o número sorteado. Interação simples, leve e
+                                divertida.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">HTML</span><span class="tag">CSS</span><span
+                                    class="tag">JavaScript</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#" target="_blank" rel="noopener" class="btn-outline">Ver Código</a>
+                                <a href="#" target="_blank" rel="noopener" class="btn-solid">Ver Online</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 2 -->
+                    <article class="flex-shrink-0 card-2up rounded-xl shadow-lg snap-start bg-gray-900 accent-border"
+                        data-project-id="2">
+                        <div class="p-6">
+                            <div class="relative w-full h-56 bg-gray-950 rounded-lg overflow-hidden mb-6">
+                                <div class="carousel-track w-full h-full relative">
+                                    <div class="carousel-slide absolute inset-0 transition-opacity duration-300"
+                                        data-slide-index="0">
+                                        <img loading="lazy"
+                                            src="https://placehold.co/550x224/3860FF/FFFFFF?text=Slide+1:+Capa+Principal+Amigo+Secreto"
+                                            alt="Capa principal Amigo Secreto" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="carousel-slide absolute inset-0 transition-opacity duration-300 slide-hidden"
+                                        data-slide-index="1">
+                                        <img loading="lazy"
+                                            src="https://placehold.co/550x224/2222FF/FFFFFF?text=Slide+2:+Design+System+Usado"
+                                            alt="Design System usado" class="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+
+                                <button class="carousel-prev" onclick="prevSlide(this)" aria-label="Slide anterior">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                                <button class="carousel-next" onclick="nextSlide(this)" aria-label="Próximo slide">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+
+                                <div class="carousel-dots">
+                                    <button class="dot dot-active" onclick="goToSlide(this,0)"
+                                        aria-label="Ir ao slide 1"></button>
+                                    <button class="dot" onclick="goToSlide(this,1)" aria-label="Ir ao slide 2"></button>
+                                </div>
+                            </div>
+
+                            <h3 class="text-2xl font-bold text-white mb-2">Jogo de Amigo Secreto</h3>
+                            <p class="text-gray-400 text-sm mb-4">Adicione nomes, sorteie e reinicie. Experiência fluida
+                                e intuitiva.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">HTML</span><span class="tag">CSS</span><span
+                                    class="tag">JavaScript</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#" target="_blank" rel="noopener" class="btn-outline">Ver Código</a>
+                                <a href="#" target="_blank" rel="noopener" class="btn-solid">Ver Online</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projeto 3 -->
+                    <article class="flex-shrink-0 card-2up rounded-xl shadow-lg snap-start bg-gray-900 accent-border"
+                        data-project-id="3">
+                        <div class="p-6">
+                            <div class="relative w-full h-56 bg-gray-950 rounded-lg overflow-hidden mb-6">
+                                <div class="carousel-track w-full h-full relative">
+                                    <div class="carousel-slide absolute inset-0 transition-opacity duration-300"
+                                        data-slide-index="0">
+                                        <img loading="lazy"
+                                            src="https://placehold.co/550x224/4B0082/FFFFFF?text=Slide+1:+Visao+Geral+do+Dashboard"
+                                            alt="Visão geral do dashboard" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="carousel-slide absolute inset-0 transition-opacity duration-300 slide-hidden"
+                                        data-slide-index="1">
+                                        <img loading="lazy"
+                                            src="https://placehold.co/550x224/7C00CC/FFFFFF?text=Slide+2:+Grafico+Detalhado"
+                                            alt="Gráfico detalhado" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="carousel-slide absolute inset-0 transition-opacity duration-300 slide-hidden"
+                                        data-slide-index="2">
+                                        <img loading="lazy"
+                                            src="https://placehold.co/550x224/A020F0/FFFFFF?text=Slide+3:+Prototipo+no+Figma"
+                                            alt="Protótipo no Figma" class="w-full h-full object-cover" />
+                                    </div>
+                                    <div class="carousel-slide absolute inset-0 transition-opacity duration-300 slide-hidden"
+                                        data-slide-index="3">
+                                        <img loading="lazy"
+                                            src="https://placehold.co/550x224/D8BFD8/000000?text=Slide+4:+Componentes+do+DS"
+                                            alt="Componentes do Design System" class="w-full h-full object-cover" />
+                                    </div>
+                                </div>
+
+                                <button class="carousel-prev" onclick="prevSlide(this)" aria-label="Slide anterior">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+                                <button class="carousel-next" onclick="nextSlide(this)" aria-label="Próximo slide">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+
+                                <div class="carousel-dots">
+                                    <button class="dot dot-active" onclick="goToSlide(this,0)"
+                                        aria-label="Ir ao slide 1"></button>
+                                    <button class="dot" onclick="goToSlide(this,1)" aria-label="Ir ao slide 2"></button>
+                                    <button class="dot" onclick="goToSlide(this,2)" aria-label="Ir ao slide 3"></button>
+                                    <button class="dot" onclick="goToSlide(this,3)" aria-label="Ir ao slide 4"></button>
+                                </div>
+                            </div>
+
+                            <h3 class="text-2xl font-bold text-white mb-2">Dashboard de Gestão Financeira</h3>
+                            <p class="text-gray-400 text-sm mb-4">Dashboard interativo com gráficos e componentes de
+                                Design System.</p>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="tag">React</span><span class="tag">Tailwind</span><span class="tag">Figma
+                                    UX</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <a href="#" target="_blank" rel="noopener" class="btn-outline">Ver Código</a>
+                                <a href="#" target="_blank" rel="noopener" class="btn-solid">Ver Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Placeholder -->
+                    <article
+                        class="flex-shrink-0 card-2up rounded-xl shadow-lg snap-start flex flex-col items-center justify-center p-6 border border-dashed border-gray-700 bg-gray-900 text-center">
+                        <span class="text-3xl text-gray-600 mb-2">🏗️</span>
+                        <h3 class="text-xl font-semibold text-gray-400 mb-2">Próximo Projeto</h3>
+                        <p class="text-gray-500 text-sm max-w-sm">Estudo de caso de otimização de performance e Core Web
+                            Vitals.</p>
+                    </article>
+                </div>
+
+                <p class="text-center text-sm text-gray-500 mt-6 hidden sm:block">
+                    ← Role horizontalmente ou use as setas para ver todos os projetos →
                 </p>
+            </section>
 
-                <div class="btn-social">
-                    <a href="https://wa.me/5585996959732"><button><i class="bi bi-whatsapp"></i></button></a>
-                    <a href="mailto:mariacecilia821129@gmail.com"><button><i class="bi bi-envelope"></i></button></a>
-                    <a href="https://github.com/cecilia2904"><button><i class="bi bi-github"></i></button></a>
-                    <a href="https://www.linkedin.com/in/maria-cecilia-freitas-fonteles/"><button><i
-                                class="bi bi-linkedin"></i></button></a>
-                </div><!--btn-social-->
-            </div><!--line-footer-->
-        </div><!--interface-->
-    </footer>
+        </main>
 
+        <!-- Footer -->
+        <footer id="contato" class="py-16 border-t border-gray-800">
+            <div class="text-center space-y-6">
+                <h2 class="text-3xl font-extrabold text-white">VAMOS <span class="text-green-400">CONVERSAR?</span></h2>
+                <p class="text-gray-400">Disponível para <strong>projetos sob demanda</strong> (UI/UX e Front-end) em
+                    horários alternativos.</p>
+
+                <div class="flex items-center justify-center gap-4">
+                    <a class="social" href="https://wa.me/5585996959732" aria-label="WhatsApp" target="_blank"
+                        rel="noopener"><i class="bi bi-whatsapp"></i></a>
+                    <a class="social" href="mailto:mariacecilia821129@gmail.com" aria-label="E-mail"><i
+                            class="bi bi-envelope"></i></a>
+                    <a class="social" href="https://github.com/cecilia2904" aria-label="GitHub" target="_blank"
+                        rel="noopener"><i class="bi bi-github"></i></a>
+                    <a class="social" href="https://www.linkedin.com/in/maria-cecilia-freitas-fonteles/"
+                        aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
 </body>
 
 </html>
