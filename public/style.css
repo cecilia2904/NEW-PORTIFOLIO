@@ -1,6 +1,6 @@
 /* Base */
 :root {
-    --green-500: #22c55e;
+    --green-500: #4ade80;
     --gray-900: #0b0f17;
 }
 
@@ -78,7 +78,7 @@ body {
     background: rgba(18, 98, 16, .10);
     /* usa sua brand */
     border: 1px solid rgba(18, 98, 16, .35);
-    color: var(--brand, #126210);
+    color: var(--brand, #4ade80);
     font-size: 1.05rem;
 }
 
@@ -89,7 +89,7 @@ body {
 
 /* Botões (garante contraste com brand escuro) */
 .btn-solid {
-    background: var(--brand, #126210);
+    background: var(--brand, #4ade80);
     color: #fff;
 }
 
@@ -124,18 +124,18 @@ body {
     border-radius: 12px;
     background: rgba(18, 98, 16, .10);
     /* usa o verde escuro translúcido */
-    color: var(--brand, #126210);
-    /* fallback: #126210 */
+    color: var(--brand, #4ade80);
+    /* fallback: #4ade80 */
     border: 1px solid rgba(18, 98, 16, .35);
 }
 
 /* (opcional) utilitários de marca */
 .text-brand {
-    color: var(--brand, #126210) !important;
+    color: var(--brand, #4ade80) !important;
 }
 
 .bg-brand {
-    background: var(--brand, #126210) !important;
+    background: var(--brand, #4ade80) !important;
 }
 
 
