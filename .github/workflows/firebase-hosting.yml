@@ -13,23 +13,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  preview:
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install Firebase CLI
-        run: npm i -g firebase-tools
-
-      - name: Deploy preview channel (expires in 7 days)
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-        run: |
-          firebase use "$PROJECT_ID"
-          firebase hosting:channel:deploy "pr-${{ github.event.number }}" --expires 7d
-
   deploy:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
