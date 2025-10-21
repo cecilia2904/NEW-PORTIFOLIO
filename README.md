@@ -3,7 +3,8 @@
 Bem-vindo ao repositório do **Portfólio de Maria Cecília**! Site one-page para apresentar minhas especialidades em UX/UI e Frontend, com foco em interfaces responsivas, usabilidade e estética clean (tema escuro + verde).
 
 ## 📸 Prévia do Projeto
-<img width="1866" height="911" alt="image" src="https://github.com/user-attachments/assets/b8fbb118-739e-4cb3-b0cb-2b5b2a8566a4" />
+<img width="1866" height="911" alt="image" src="https://github.com/user-attachments/assets/2b07eaae-e3de-4c68-9801-23468f75d769" />
+
 
 ## 🚀 Sobre o Projeto
 Portfólio criado para consolidar minha presença profissional como **UX/UI & Frontend Developer**. Reúne cases, telas e protótipos criados no Figma e implementações em HTML, CSS e JavaScript.
@@ -49,18 +50,17 @@ Portfólio criado para consolidar minha presença profissional como **UX/UI & Fr
 
 ```
 portfolio/
+├── public/
+│ └── images/
+| └── projetos/
 ├── index.html
-├── styles/
-│ └── style.css
-├── assets/
-│ ├── preview.png
-│ ├── logos-e-icones/
-│ └── projetos/ # imagens das capas dos projetos
+├── index.js
+├── style.css
 └── README.md
 ```
 
 ## 🌐 Deploy
-O projeto está online em: **https://maria-cecilia-2904.web.app/**
+O projeto está online em: **https://maria-cecilia-6cced.web.app**
 
 ## 📈 Projetos em Destaque
 - **Edifica (Landing/Institucional)**: site institucional com catálogo e vitrine de produtos.
